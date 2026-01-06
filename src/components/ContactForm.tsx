@@ -31,15 +31,15 @@ export default function ContactForm() {
                         <div className="space-y-4">
                             <div>
                                 <label className="block text-sm font-bold text-gray-700 mb-1">Full Name</label>
-                                <input type="text" className="w-full border border-gray-300 p-3 rounded-sm focus:outline-none focus:border-[var(--color-primary-gold)]" placeholder="Chief/Mr/Mrs..." />
+                                <input type="text" className="w-full border text-black border-gray-300 p-3 rounded-sm focus:outline-none focus:border-[var(--color-primary-gold)]" placeholder="Chief/Mr/Mrs..." />
                             </div>
                             <div>
                                 <label className="block text-sm font-bold text-gray-700 mb-1">Phone Number</label>
-                                <input type="tel" className="w-full border border-gray-300 p-3 rounded-sm focus:outline-none focus:border-[var(--color-primary-gold)]" placeholder="080..." />
+                                <input type="tel" className="w-full border text-black border-gray-300 p-3 rounded-sm focus:outline-none focus:border-[var(--color-primary-gold)]" placeholder="080..." />
                             </div>
                             <div>
                                 <label className="block text-sm font-bold text-gray-700 mb-1">Project Location</label>
-                                <input type="text" className="w-full border border-gray-300 p-3 rounded-sm focus:outline-none focus:border-[var(--color-primary-gold)]" placeholder="e.g., Sangotedo, Ajah" />
+                                <input type="text" className="w-full border text-black border-gray-300 p-3 rounded-sm focus:outline-none focus:border-[var(--color-primary-gold)]" placeholder="e.g., Sangotedo, Ajah" />
                             </div>
                             <div>
                                 <label className="block text-sm font-bold text-gray-700 mb-1">Service Needed</label>
