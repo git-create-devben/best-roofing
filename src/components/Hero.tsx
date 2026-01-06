@@ -81,7 +81,7 @@ export default function Hero() {
                         initial={{ opacity: 0, y: 20 }}
                         animate={{ opacity: 1, y: 0 }}
                         transition={{ duration: 0.6, delay: 0.2 }}
-                        className="text-base md:text-lg text-gray-200 mb-8 leading-relaxed border-l-4 border-[var(--color-primary-gold)] pl-6 max-w-2xl bg-black/30  py-4 pr-4 rounded-r-lg"
+                        className="text-base md:text-lg text-gray-200 mb-8 leading-relaxed border-l-4 border-[var(--color-primary-gold)] pl-6 max-w-2xl  py-4 pr-4 rounded-r-lg"
                     >
                         We install original Stone-coated, Longspan Aluminium, and Step-tile roofs guaranteed to withstand Lagos rain and heat for 50 years.
                     </motion.p>
