@@ -27,31 +27,37 @@ export default function ContactForm() {
                         </div>
                     </div>
 
-                    <form className="bg-white p-6 md:p-8 rounded-lg shadow-2xl" onSubmit={(e) => e.preventDefault()}>
+                    <form
+                        className="bg-white p-6 md:p-8 rounded-lg shadow-2xl"
+                        onSubmit={(e) => {
+                            e.preventDefault();
+                            alert("Thank you! Your request has been received. Our engineer will contact you shortly.");
+                        }}
+                    >
                         <div className="space-y-4">
                             <div>
                                 <label className="block text-sm font-bold text-gray-700 mb-1">Full Name</label>
-                                <input type="text" className="w-full border text-black border-gray-300 p-3 rounded-sm focus:outline-none focus:border-[var(--color-primary-gold)]" placeholder="Chief/Mr/Mrs..." />
+                                <input required type="text" className="w-full border text-black border-gray-300 p-3 rounded-sm focus:outline-none focus:border-[var(--color-primary-gold)]" placeholder="Chief/Mr/Mrs..." />
                             </div>
                             <div>
                                 <label className="block text-sm font-bold text-gray-700 mb-1">Phone Number</label>
-                                <input type="tel" className="w-full border text-black border-gray-300 p-3 rounded-sm focus:outline-none focus:border-[var(--color-primary-gold)]" placeholder="080..." />
+                                <input required type="tel" className="w-full border text-black border-gray-300 p-3 rounded-sm focus:outline-none focus:border-[var(--color-primary-gold)]" placeholder="080..." />
                             </div>
                             <div>
                                 <label className="block text-sm font-bold text-gray-700 mb-1">Project Location</label>
-                                <input type="text" className="w-full border text-black border-gray-300 p-3 rounded-sm focus:outline-none focus:border-[var(--color-primary-gold)]" placeholder="e.g., Sangotedo, Ajah" />
+                                <input required type="text" className="w-full border text-black border-gray-300 p-3 rounded-sm focus:outline-none focus:border-[var(--color-primary-gold)]" placeholder="e.g., Sangotedo, Ajah" />
                             </div>
                             <div>
                                 <label className="block text-sm font-bold text-gray-700 mb-1">Service Needed</label>
                                 <select className="w-full border border-gray-300 p-3 rounded-sm focus:outline-none focus:border-[var(--color-primary-gold)] text-gray-600">
                                     <option>New Roof Installation</option>
-                                    <option>Roof Repair / Leakage Fixing</option>
-                                    <option>Re-roofing (Changing to Stone-coated)</option>
+                                    <option>Roof Restoration</option>
+                                    <option>Material Supply</option>
                                     <option>Rain Gutter Installation</option>
                                 </select>
                             </div>
 
-                            <button className="w-full bg-[var(--color-primary-gold)] text-black font-bold py-4 rounded-sm hover:bg-[var(--color-primary-gold-hover)] transition-colors shadow-lg">
+                            <button className="w-full bg-[var(--color-primary-gold)] text-black font-bold py-4 rounded-sm hover:bg-[var(--color-primary-gold-hover)] transition-colors shadow-lg cursor-pointer">
                                 Submit Request
                             </button>
                         </div>

@@ -1,10 +1,10 @@
-import { ShieldCheck, Award, ClipboardCheck } from 'lucide-react';
+import { Award, Users, Truck } from 'lucide-react';
 
 export default function TrustBar() {
     const items = [
-        { icon: ShieldCheck, label: "Registered Company", sub: "RC 123456" },
-        { icon: Award, label: "50-Year Warranty", sub: "Rust & Fade Proof" },
-        { icon: ClipboardCheck, label: "Free Site Inspection", sub: "Anywhere in Lagos" },
+        { icon: Award, label: "50-Year Material Warranty", sub: "Guaranteed Quality" },
+        { icon: Users, label: "Professional Engineering Team", sub: "Certified Experts" },
+        { icon: Truck, label: "Fast Delivery Nationwide", sub: "Logistics Covered" },
     ];
 
     return (

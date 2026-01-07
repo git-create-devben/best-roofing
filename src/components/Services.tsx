@@ -2,8 +2,10 @@
 
 import Image from 'next/image';
 import { motion } from 'framer-motion';
+import { useBusinessName } from './BusinessNameProvider';
 
 export default function Services() {
+    const businessName = useBusinessName();
     const services = [
         {
             title: "New Roof Installation",
@@ -11,14 +13,14 @@ export default function Services() {
             image: "/images/service-installation.png"
         },
         {
-            title: "Roof Repairs & Maintenance",
-            desc: "Fast and reliable leak detection, tile replacement, and gutter maintenance to protect your home.",
+            title: "Roof Restoration",
+            desc: "Complete restoration of old roofs. We wash, seal, and recoat fading stone-coated tiles to look brand new.",
             image: "/images/service-repair.png"
         },
         {
-            title: "Commercial Roofing",
-            desc: "Scalable roofing solutions for office complexes, warehouses, and industrial buildings in Lagos.",
-            image: "/images/service-commercial.png"
+            title: "Material Supply",
+            desc: "Direct import and supply of authentic roofing sheets. We supply to contractors and home owners nationwide.",
+            image: "/images/service-commercial.png" // Placeholder
         }
     ];
 
@@ -26,9 +28,9 @@ export default function Services() {
         <section id="services" className="bg-[var(--color-charcoal-dark)] py-20">
             <div className="container mx-auto px-6">
                 <div className="text-center mb-16">
-                    <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">Our <span className="text-[var(--color-primary-gold)]">Premium Services</span></h2>
+                    <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">Services by <span className="text-[var(--color-primary-gold)]">{businessName}</span></h2>
                     <p className="text-[var(--color-text-muted)] max-w-2xl mx-auto">
-                        We deliver top-tier roofing expertise tailored to the unique climate and architectural needs of Lagos.
+                        We deliver top-tier roofing expertise tailored to the unique climate and architectural needs of Nigeria.
                     </p>
                 </div>
 
@@ -54,7 +56,12 @@ export default function Services() {
                             <div className="p-6 md:p-8 border-b-2 border-transparent group-hover:border-[var(--color-primary-gold)] transition-colors">
                                 <h3 className="text-xl font-bold text-white mb-3 group-hover:text-[var(--color-primary-gold)] transition-colors">{service.title}</h3>
                                 <p className="text-gray-400 leading-relaxed mb-4">{service.desc}</p>
-                                <span className="text-[var(--color-primary-gold)] text-sm font-semibold uppercase tracking-wider group-hover:underline">Learn More</span>
+                                <button
+                                    onClick={() => document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' })}
+                                    className="text-[var(--color-primary-gold)] text-sm font-semibold uppercase tracking-wider group-hover:underline cursor-pointer bg-transparent border-none p-0"
+                                >
+                                    Get Quote
+                                </button>
                             </div>
                         </motion.div>
                     ))}
